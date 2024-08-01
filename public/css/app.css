@@ -1,0 +1,633 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #74b6f9;
+    margin: 0;
+}
+
+.container {
+    width: 20rem;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 18px;
+    border: 0;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.input-name {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-email {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-confirm_password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+button.login {
+    font-size: 18px;
+    width: 20rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    background-color: #1188ff;
+}
+
+button.login:active {
+    background-color: #004077;
+}
+
+button.register {
+    font-size: 18px;
+    width: 20rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    background-color: #1188ff;
+}
+
+button.register:active {
+    background-color: #004077;
+}
+
+a.login:active {
+    color: #0800ff;
+}
+
+a.register:active {
+    color: #0800ff;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #e8f0f6;
+    padding: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    font-size: 30px;
+}
+
+.content {
+    margin-left: 250px;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.sidebar a {
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #bedfff;
+}
+
+.sidebar a:active {
+    background-color: #bedfff;
+}
+
+.sidebar h2 span {
+    color: #1188ff;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+.navbar a {
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+    background-color: #f5004f;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar a:active {
+    background-color: #a7254e;
+    transition: all 0.1s ease-in;
+}
+
+.add-form a {
+    background-color: #1188ff;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.add-form a:active {
+    background-color: #0d5dad;
+}
+
+.add-form a.disposisi {
+    background-color: #eef449;
+    color: #000;
+}
+
+.add-form a.disposisi:active {
+    background-color: #919430;
+}
+
+.add-form a.revisi {
+    background-color: #ff9ca9;
+    color: #000;
+}
+
+.add-form a.revisi:active {
+    background-color: #a4656e;
+}
+
+.add-form {
+    gap: 3rem;
+    display: flex;
+    justify-content: end;
+}
+
+div.dt-container .dt-search input {
+    font-size: 16px;
+    border-radius: 10px !important;
+    padding: 0.5rem !important;
+    padding-inline: 1rem !important;
+}
+
+div.dt-container .dt-search label {
+    display: none;
+}
+
+input[type="file"] {
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    padding: 0;
+    padding-right: 1rem;
+}
+
+input[type="file"]::file-selector-button {
+    cursor: pointer;
+    padding: 0.8rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+    margin-right: 1rem;
+    border: 0;
+    background-color: #1188ff;
+    color: #fff;
+}
+
+.create-form {
+    font-size: 18px;
+}
+
+.create-form input,
+select {
+    width: 100%;
+}
+
+select {
+    padding: 0.5rem;
+    font-size: 18px;
+    border: 0;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.create-form .input-item {
+    margin-top: 2rem;
+}
+
+.create-form button {
+    position: absolute;
+    right: 0;
+    width: 10rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    margin-right: 2rem;
+    border: 0;
+    background-color: #1188ff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.create-form button:active {
+    background-color: #0d5dad;
+}
+
+.edit-form {
+    font-size: 18px;
+}
+
+.edit-form input {
+    width: 100%;
+}
+
+.edit-form .input-item {
+    margin-top: 2rem;
+}
+
+.edit-form a {
+    text-align: center;
+    display: block;
+    width: 12rem;
+    padding-inline: 1rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    border: 0;
+    background-color: #1188ff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-form a:active {
+    background-color: #0d5dad;
+}
+
+.edit-form button {
+    position: absolute;
+    right: 0;
+    width: 10rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    margin-right: 2rem;
+    border: 0;
+    background-color: #1188ff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.edit-form button:active {
+    background-color: #0d5dad;
+}
+
+#surat-keluar i {
+    padding: 0.5rem;
+}
+
+#surat-keluar button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#disposisi-surat i {
+    padding: 0.5rem;
+}
+
+#disposisi-surat button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#revisi-surat i {
+    padding: 0.5rem;
+}
+
+#revisi-surat button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#agenda-acara i {
+    padding: 0.5rem;
+}
+
+#agenda-acara button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#ruangan i {
+    padding: 0.5rem;
+}
+
+#ruangan button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+i {
+    font-size: 20px;
+}
+
+i.fa-solid.fa-print {
+    background-color: #9eceff;
+    border-radius: 10px;
+}
+
+i.fa-solid.fa-print:active {
+    background-color: #6986a3;
+}
+
+i.fa-regular.fa-pen-to-square {
+    background-color: #f6fb7a;
+    border-radius: 10px;
+}
+
+i.fa-regular.fa-pen-to-square:active {
+    background-color: #a0a352;
+}
+
+i.fa-solid.fa-trash {
+    background-color: #ef5a6f;
+    border-radius: 10px;
+}
+
+i.fa-solid.fa-trash:active {
+    background-color: #a3424f;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+    text-align: left !important;
+}
+
+span.status-acc {
+    color: #1e7700;
+    background-color: #c5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+span.status-disposisi {
+    color: #776d00;
+    background-color: #f5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+span.status-revisi {
+    color: #770000;
+    background-color: #ffbbb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.input-list {
+    display: flex;
+    gap: 3rem;
+}
+
+.input-flex {
+    width: 100%;
+}
+
+.priority.high {
+    color: #770000;
+    background-color: #ffbbb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.priority.medium {
+    color: #776d00;
+    background-color: #f5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.priority.low {
+    color: #1e7700;
+    background-color: #c5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status.planned {
+    color: #004077;
+    background-color: #b1bfff;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status.ongoing {
+    color: #776d00;
+    background-color: #f5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status.completed {
+    color: #1e7700;
+    background-color: #c5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status.cancelled {
+    color: #770000;
+    background-color: #ffbbb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status-ruangan.maintenance {
+    color: #770000;
+    background-color: #ffbbb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status-ruangan.booked {
+    color: #776d00;
+    background-color: #f5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status-ruangan.available {
+    color: #1e7700;
+    background-color: #c5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status-surat-masuk.pending {
+    color: #770000;
+    background-color: #ffbbb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status-surat-masuk.in.progress {
+    color: #776d00;
+    background-color: #f5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.status-surat-masuk.completed {
+    color: #1e7700;
+    background-color: #c5ffb1;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    border-radius: 10px;
+}
+
+.card-list {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-item {
+    width: 15rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.card-item.surat-keluar {
+    background: linear-gradient(45deg, #e4ff19, #e4f371);
+}
+
+.card-item.surat-masuk {
+    background: linear-gradient(45deg, #9eceff, #d4e9ff);
+}
+
+.card-item.agenda-acara {
+    background: linear-gradient(45deg, #7bff4e, #beffa9);
+}
+
+.card-item.kelola-ruangan {
+    background: linear-gradient(45deg, #ff4862, #ffd9df);
+}
+
+.card-item h2 {
+    color: #585858;
+    font-weight: 400;
+    margin: 0;
+    font-size: 20px;
+}
+
+.card-item p {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.update-role {
+    display: flex;
+    gap: 2rem;
+    width: 25rem;
+}
+
+.update-role button {
+    border-radius: 10px;
+    background-color: #7afb83;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 3rem;
+}
+
+.update-role button:active {
+    background-color: #66a352;
+}
+
+a.disabled {
+    display: none;
+}
