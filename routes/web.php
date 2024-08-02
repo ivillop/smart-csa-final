@@ -21,7 +21,14 @@ Route::middleware('auth')->group(function () {
     Route::resource('surat-keluar', SuratKeluarController::class);
 
     Route::get('/surat-masuk', [DashboardController::class, 'suratMasuk'])->name('surat-masuk.index');
-    Route::resource('surat-masuk', SuratMasukController::class);
+    Route::get('surat-masuk', [SuratMasukController::class, 'index'])->name('surat-masuk.index');
+    Route::get('surat-masuk/create-disposisi', [SuratMasukController::class, 'createDisposisi'])->name('surat-masuk.create-disposisi');
+    Route::post('surat-masuk', [SuratMasukController::class, 'storeDisposisi'])->name('surat-masuk.store-disposisi');
+    Route::get('surat-masuk/create-revisi', [SuratMasukController::class, 'createRevisi'])->name('surat-masuk.create-revisi');
+    Route::post('surat-masuk/revisi', [SuratMasukController::class, 'storeRevisi'])->name('surat-masuk.store-revisi');
+
+    Route::delete('surat-masuk/disposisi/{id}', [SuratMasukController::class, 'destroyDisposisi'])->name('surat-masuk.destroy-disposisi');
+    Route::delete('surat-masuk/revisi/{id}', [SuratMasukController::class, 'destroyRevisi'])->name('surat-masuk.destroy-revisi');
 
     Route::get('/agenda-acara', [DashboardController::class, 'agendaAcara'])->name('agenda-acara.index');
     Route::resource('agenda-acara', AgendaAcaraController::class);
@@ -36,7 +43,14 @@ Route::group(['middleware' => ['role:Sekretaris']], function () {
 });
 
 Route::group(['middleware' => ['role:Sekretaris,Ketua-UKM,BEM,Kemahasiswaan']], function () {
-    Route::resource('surat-masuk', SuratMasukController::class);
+    Route::get('surat-masuk', [SuratMasukController::class, 'index'])->name('surat-masuk.index');
+    Route::get('surat-masuk/create-disposisi', [SuratMasukController::class, 'createDisposisi'])->name('surat-masuk.create-disposisi');
+    Route::post('surat-masuk', [SuratMasukController::class, 'storeDisposisi'])->name('surat-masuk.store-disposisi');
+    Route::get('surat-masuk/create-revisi', [SuratMasukController::class, 'createRevisi'])->name('surat-masuk.create-revisi');
+    Route::post('surat-masuk/revisi', [SuratMasukController::class, 'storeRevisi'])->name('surat-masuk.store-revisi');
+
+    Route::delete('surat-masuk/disposisi/{id}', [SuratMasukController::class, 'destroyDisposisi'])->name('surat-masuk.destroy-disposisi');
+    Route::delete('surat-masuk/revisi/{id}', [SuratMasukController::class, 'destroyRevisi'])->name('surat-masuk.destroy-revisi');
 });
 
 Route::group(['middleware' => ['role:BAU']], function () {
